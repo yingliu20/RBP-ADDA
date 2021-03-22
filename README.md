@@ -11,27 +11,35 @@ Setting up:
 	Clone the repositopry into your working space.
 	
 RUN the model:
-1. Source_train: python main.py source_train test_data/train
-pre-train a source network and task predictor; initialize target network by sharing same parameters and architecture with source network
+1. Source_train: pre-train a source network and task predictor; initialize target network by sharing same parameters and architecture with source network.
 
-2. Source_test: python main.py source_test test_data/test
-use pre-train network to test source data
+		python main.py source_train test_data/train
 
-3. ADDA_train: python main.py adda_train test_data/train
-update the parameters of target network based on adversarial domain adaptation
 
-4. ADDA_test: python main.py adda_test test_data/test
-use the updated target network to test target data
+2. Source_test: use pre-train network to test source data
 
-5. ADDA_predictor: python main.py adda_predictor test_data/train
-fine-tune the parameters of task predictor with both source network and target network.
+		python main.py source_test test_data/test
+		
+		
+3. ADDA_train: update the parameters of target network based on adversarial domain adaptation
 
-6. ADDA_predictor_test_source: python main.py adda_predictor_test_source test_data/test
-use the source network and new task predicor to test source data 
+		python main.py adda_train test_data/train
+		
+4. ADDA_test: use the updated target network to test target data
 
-7. ADDA_predictor_test_target: python main.py adda_predictor_test_target test_data/test
-use the updated target network and new task predicor to test target data 
+		python main.py adda_test test_data/test
+		
+5. ADDA_predictor: fine-tune the parameters of task predictor with both source network and target network.
 
+		python main.py adda_predictor test_data/train
+		
+6. ADDA_predictor_test_source: use the source network and new task predicor to test source data 
+
+		python main.py adda_predictor_test_source test_data/test
+		
+7. ADDA_predictor_test_target: use the updated target network and new task predicor to test target data 
+
+		python main.py adda_predictor_test_target test_data/test
 
 File names:
 

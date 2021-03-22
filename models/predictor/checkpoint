@@ -1,0 +1,2 @@
+model_checkpoint_path: "HNRNPC-source-predictor.ckpt"
+all_model_checkpoint_paths: "HNRNPC-source-predictor.ckpt"

@@ -1,0 +1,3 @@
+model_checkpoint_path: "HNRNPC-source.ckpt"
+all_model_checkpoint_paths: "..\\target_pretrain\\HNRNPC-target.ckpt"
+all_model_checkpoint_paths: "HNRNPC-source.ckpt"
